@@ -79,6 +79,10 @@ PRODUCT_PACKAGES += \
     update_verifier
 
 PRODUCT_SOONG_NAMESPACES += \
+# Vendor service manager
+PRODUCT_PACKAGES += \
+    vndservicemanager
+
 # WiFi
 PRODUCT_PACKAGES += \
     firmware_wlanmdsp.otaupdate_symlink \
