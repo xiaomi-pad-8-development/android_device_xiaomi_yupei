@@ -123,6 +123,11 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
 
+# QSPA
+PRODUCT_PACKAGES += \
+    vendor.qti.qspa-service \
+    qspa_vendor.rc
+
 # Sensors
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.accelerometer.xml \
