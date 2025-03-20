@@ -91,6 +91,12 @@ blob_fixups: blob_fixups_user_type = {
     'system_ext/etc/vintf/manifest/vendor.qti.qesdsys.service.xml': blob_fixup()
         .regex_replace(r'(?s)^.*?(?=<manifest)', ''),
 
+    'vendor/lib64/android.hardware.bluetooth.audio-impl_prebuilt.so': blob_fixup()
+        .replace_needed(
+            'libbluetooth_audio_session_aidl.so',
+            'libbluetooth_audio_session_aidl_prebuilt.so'
+    ),
+
     (
         'vendor/lib64/camera/components/com.qti.node.dewarp.so',
         'vendor/lib64/hw/com.qti.chi.override.so',
@@ -102,20 +108,48 @@ blob_fixups: blob_fixups_user_type = {
             'android.hardware.graphics.allocator-V1-ndk.so',
     ),
 
+            'android.media.audio.common.types-V3-ndk.so'
     ),
 
+            'android.media.audio.common.types-V3-ndk.so'
+    ),
+
+        .replace_needed(
+    ),
+
+    'vendor/lib64/libaudioserviceexampleimpl.so': blob_fixup()
+        .replace_needed(
+            'android.hardware.bluetooth.audio-impl.so',
+            'android.hardware.bluetooth.audio-impl_prebuilt.so'
+        )
+        .replace_needed(
+            'libbluetooth_audio_session_aidl.so',
+            'libbluetooth_audio_session_aidl_prebuilt.so'
+        )
+        .replace_needed(
+            'libaudio_aidl_conversion_common_ndk.so',
+            'libaudio_aidl_conversion_common_ndk_prebuilt.so'
+            'android.media.audio.common.types-V3-ndk.so'
     ),
 
     'vendor/lib64/libcameraopt.so': blob_fixup()
 
     'vendor/lib64/libqcodec2_core.so': blob_fixup()
         .add_needed('libcodec2_shim.so')
+        .replace_needed(
             'android.hardware.graphics.common-V5-ndk.so',
+    ),
+
     'vendor/lib64/libwfdmmsrc_proprietary.so': blob_fixup()
         .replace_needed(
             'android.media.audio.common.types-V2-ndk.so',
+            'android.media.audio.common.types-V3-ndk.so'
     ),
 
+            'android.media.audio.common.types-V3-ndk.so'
+        .replace_needed(
+            'libaudio_aidl_conversion_common_ndk.so',
+            'libaudio_aidl_conversion_common_ndk_prebuilt.so'
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
         .add_needed('libhidlbase_shim.so'),
 }  # fmt: skip
