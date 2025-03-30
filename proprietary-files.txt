@@ -67,6 +67,8 @@ vendor/etc/vintf/manifest/qasr_vintf.xml
 vendor/lib64/hw/audio.primary.default.so
 vendor/lib64/libPeripheralStateUtils.so
 vendor/lib64/libVoiceSdk.so
+vendor/lib64/lib_bt_lhdc.so
+vendor/lib64/lib_bt_mihc.so
 vendor/lib64/libadm.so
 vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libaudiocloudctrl.so
