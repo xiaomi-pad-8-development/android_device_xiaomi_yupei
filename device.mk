@@ -64,6 +64,7 @@ PRODUCT_PACKAGES += \
     libsndcardparser \
     libsoundtriggerhal.qti \
     libvui_intf \
+    qtiaudiohalvendorextn
 
 PRODUCT_PACKAGES += \
     android.hardware.audio.core.sounddose-V1-ndk.vendor \
