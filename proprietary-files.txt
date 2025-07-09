@@ -2266,6 +2266,7 @@ odm/firmware/vpu30_2v.mbn
 vendor/bin/cnss-daemon
 vendor/etc/init/init.vendor.wlan.rc
 
+# WiFi Display (vendor)
 vendor/bin/wfdhdcphalservice
 vendor/bin/wfdvndservice
 vendor/bin/wifidisplayhalservice
