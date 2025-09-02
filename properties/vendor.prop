@@ -183,6 +183,9 @@ persist.vendor.rcs.singlereg.feature=1
 ro.vendor.radio.build_profile=miui
 ro.vendor.radio.build_region=global
 
+# Sensors
+ro.vendor.sensors.xiaomi.udfps=true
+
 # Shutdown
 sys.vendor.shutdown.waittime=500
 
