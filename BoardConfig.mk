@@ -34,6 +34,8 @@ TARGET_CPU_VARIANT_RUNTIME := oryon
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := sun
 
+# Display
+
 # Kernel
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_RAMDISK_USE_LZ4 := true
