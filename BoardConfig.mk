@@ -36,6 +36,8 @@ TARGET_BOOTLOADER_BOARD_NAME := sun
 
 # Display
 
+# Filesystem
+TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config.fs
 # Kernel
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_RAMDISK_USE_LZ4 := true
