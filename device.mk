@@ -3,6 +3,12 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Generic ramdisk allow list
+$(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
+
+
+# pKVM
+$(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk)
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
