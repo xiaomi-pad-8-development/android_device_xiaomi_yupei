@@ -38,6 +38,13 @@ TARGET_BOOTLOADER_BOARD_NAME := sun
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config.fs
+
+# HIDL
+    $(DEVICE_PATH)/configs/hidl/compatibility_matrix.device.xml \
+    hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
+
+DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix_aidl.xml
+
 # Kernel
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_RAMDISK_USE_LZ4 := true
