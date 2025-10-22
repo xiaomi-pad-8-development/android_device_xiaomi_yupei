@@ -3,3 +3,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+    # Enable WLAN cold boot calibration
+    write /sys/kernel/cnss/fs_ready 1
+    write /sys/bus/platform/devices/1d84000.ufshc/clkscale_enable 1
+    write /sys/bus/platform/devices/1d84000.ufshc/auto_hibern8 5000
+    write /sys/bus/platform/devices/1d84000.ufshc/clkgate_enable 1
