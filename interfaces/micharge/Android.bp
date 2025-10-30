@@ -3,3 +3,22 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
+aidl_interface {
+    stability: "vintf",
+    owner: "xiaomi",
+    backend: {
+        ndk: { 
+            enabled: true,
+        },
+        cpp: {
+            enabled: true,
+        },
+        java: {
+            sdk_version: "module_current",
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
