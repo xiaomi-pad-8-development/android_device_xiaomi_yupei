@@ -3,3 +3,9 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
+cc_binary {
+    srcs: ["service.cpp"],
+    vendor: true,
+    relative_install_path: "hw",
+    shared_libs: [
+        "libbinder_ndk",
