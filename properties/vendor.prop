@@ -156,6 +156,7 @@ debug.c2.use_dmabufheaps=1
 debug.stagefright.c2inputsurface=-1
 media.c2.hal.selection=aidl
 ro.mediaserver.64b.enable=true
+vendor.media.omx=0
 
 ro.config.alarm_vol_steps=15
 ro.config.media_vol_default=10
