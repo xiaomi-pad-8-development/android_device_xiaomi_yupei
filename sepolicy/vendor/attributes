@@ -17,6 +17,9 @@ attribute vendor_hal_displayfeature_xiaomi;
 attribute vendor_hal_displayfeature_xiaomi_server;
 attribute vendor_hal_displayfeature_xiaomi_client;
 
+# Hypsys
+attribute hal_hypsys_vendor_service_client;
+
 # Mlipay
 attribute hal_mlipay;
 attribute hal_mlipay_server;
