@@ -1460,6 +1460,7 @@ vendor/lib64/libhdrdynamicootf.so
 vendor/lib64/libhdrvivid.so
 
 # Display (HWC)
+vendor/bin/hw/vendor.qti.hardware.display.composer-service;DISABLE_DEPS
 vendor/bin/qdcmss
 vendor/etc/init/qdcmss.rc
 vendor/etc/snapdragon_color_libs_config.xml

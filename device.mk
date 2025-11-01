@@ -116,6 +116,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
 
+# Display
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.composer3-V3-ndk.vendor \
+    vendor.qti.hardware.display.aiqe-V2-ndk.vendor  \
+    vendor.qti.hardware.display.config-V12-ndk.vendor  \
+    vendor.qti.hardware.display.composer3-V1-ndk.vendor
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
