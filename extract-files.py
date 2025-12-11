@@ -77,6 +77,9 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed(
             'android.hardware.sensors-V2-ndk.so',
             'android.hardware.sensors-V3-ndk.so'
+        )
+        .replace_needed(
+            'libtinyxml2.so',
     ),
 
     (
@@ -84,9 +87,51 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .regex_replace('xml=version', 'xml version'),
 
+    (
+        'odm/lib64/camera/plugins/com.xiaomi.plugin.anchor.so',
+        'odm/lib64/camera/plugins/com.xiaomi.plugin.offlineawbideal.so',
+        'odm/lib64/camera/plugins/com.xiaomi.plugin.offlineb2y.so',
+        'odm/lib64/camera/plugins/com.xiaomi.plugin.offlineformatconvertor.so',
+        'odm/lib64/camera/plugins/com.xiaomi.plugin.offlinehdrraw2y.so',
+        'odm/lib64/camera/plugins/com.xiaomi.plugin.offlineheic.so',
+        'odm/lib64/camera/plugins/com.xiaomi.plugin.offlinei2y.so',
+        'odm/lib64/camera/plugins/com.xiaomi.plugin.offlinejpeg.so',
+        'odm/lib64/camera/plugins/com.xiaomi.plugin.offlinemfnr.so',
+        'odm/lib64/camera/plugins/com.xiaomi.plugin.offlinemlawb.so',
+        'odm/lib64/camera/plugins/com.xiaomi.plugin.offlinetintless.so',
+        'odm/lib64/camera/plugins/com.xiaomi.plugin.offlinetintlesshdr.so',
+        'odm/lib64/camera/plugins/com.xiaomi.plugin.offlineyuvreprocess.so',
+        'odm/lib64/camera/plugins/com.xiaomi.plugin.offlineyuvsplit.so',
+        'odm/lib64/libmiXmlParser.so',
+        'vendor/bin/hw/vendor.qti.camera.provider-service_64',
+        'vendor/bin/hw/vendor.qti.hardware.display.composer-service',
+        'vendor/bin/poweropt-service',
+        'vendor/lib64/libaodoptfeature.so',
+        'vendor/lib64/libapengine.so',
+        'vendor/lib64/libaudiocloudctrl.so',
+        'vendor/lib64/libcamxcoreutils.so',
+        'vendor/lib64/libcamxods.so',
+        'vendor/lib64/liblearningmodule.so',
+        'vendor/lib64/libmicamera_aidl_provider.so',
+        'vendor/lib64/libpowercore.so',
+        'vendor/lib64/libpsmoptfeature.so',
+        'vendor/lib64/libsdmclient.so',
+        'vendor/lib64/libsimulation.so',
+        'vendor/lib64/libstandbyfeature.so',
+    ): blob_fixup()
+        .replace_needed(
+            'libtinyxml2.so',
+    ),
+
+    'odm/lib64/hw/displayfeature.default.so': blob_fixup()
         .replace_needed(
             'android.hardware.sensors-V2-ndk.so',
             'android.hardware.sensors-V3-ndk.so'
+        )
+        .replace_needed(
+            'libtinyxml2.so',
+    ),
+
     (
         'odm/lib64/libaudioroute_ext.so',
         'vendor/lib64/libagm.so',
@@ -94,6 +139,7 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libmcs.so',
         'vendor/lib64/libmikaraoke.so',
     ): blob_fixup()
+        .replace_needed(
             'libaudioroute.so',
             'libaudioroute-v34.so'
     ),
@@ -122,6 +168,9 @@ blob_fixups: blob_fixups_user_type = {
     ),
 
             'android.media.audio.common.types-V3-ndk.so'
+        )
+        .replace_needed(
+            'libtinyxml2.so',
     ),
 
         'vendor/lib64/libVoiceSdk.so',
@@ -148,6 +197,8 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libcameraopt.so': blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
 
+        .replace_needed(
+            'libtinyxml2.so',
     'vendor/lib64/libqcodec2_core.so': blob_fixup()
         .add_needed('libcodec2_shim.so')
         .replace_needed(
