@@ -124,7 +124,10 @@ blob_fixups: blob_fixups_user_type = {
             'android.media.audio.common.types-V3-ndk.so'
     ),
 
+        'vendor/lib64/libVoiceSdk.so',
+        'vendor/lib64/libcapiv2uvvendor.so',
         .replace_needed(
+            'libtensorflowlite_c.so',
     ),
 
     'vendor/lib64/libaudioserviceexampleimpl.so': blob_fixup()
