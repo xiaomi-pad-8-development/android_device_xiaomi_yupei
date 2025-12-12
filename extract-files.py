@@ -180,6 +180,7 @@ blob_fixups: blob_fixups_user_type = {
     ),
 
     'vendor/lib64/libaudioserviceexampleimpl.so': blob_fixup()
+        .add_needed('libaudioutils_shim.so')
         .replace_needed(
             'android.hardware.bluetooth.audio-impl.so',
             'android.hardware.bluetooth.audio-impl_prebuilt.so'
