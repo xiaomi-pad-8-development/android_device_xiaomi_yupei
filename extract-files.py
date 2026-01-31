@@ -150,6 +150,9 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/etc/clstc_config_library.xml': blob_fixup()
         .regex_replace(r'<library>\s*<name>libdolbyclstc[\s\S]*?</library>', ''),
 
+    'vendor/etc/sensors/hals.conf': blob_fixup()
+        .regex_replace('.*vl53l8.*\n?', ''),
+
     'vendor/lib64/android.hardware.bluetooth.audio-impl_prebuilt.so': blob_fixup()
         .replace_needed(
             'libbluetooth_audio_session_aidl.so',
