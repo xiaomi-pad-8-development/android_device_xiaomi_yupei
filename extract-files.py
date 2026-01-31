@@ -147,6 +147,9 @@ blob_fixups: blob_fixups_user_type = {
     'system_ext/etc/vintf/manifest/vendor.qti.qesdsys.service.xml': blob_fixup()
         .regex_replace(r'(?s)^.*?(?=<manifest)', ''),
 
+    'vendor/etc/clstc_config_library.xml': blob_fixup()
+        .regex_replace(r'<library>\s*<name>libdolbyclstc[\s\S]*?</library>', ''),
+
     'vendor/lib64/android.hardware.bluetooth.audio-impl_prebuilt.so': blob_fixup()
         .replace_needed(
             'libbluetooth_audio_session_aidl.so',
