@@ -128,6 +128,8 @@ blob_fixups: blob_fixups_user_type = {
             'libtinyxml2-v34.so'
     ),
 
+    ): blob_fixup()
+        .replace_needed(
     'odm/lib64/hw/displayfeature.default.so': blob_fixup()
         .replace_needed(
             'android.hardware.sensors-V2-ndk.so',
@@ -179,9 +181,17 @@ blob_fixups: blob_fixups_user_type = {
             'android.hardware.graphics.allocator-V2-ndk.so'
     ),
 
+    (
+        'vendor/lib64/hw/android.hardware.bluetooth.audio_sw.so',
+        'vendor/lib64/libaudio_aidl_conversion_common_ndk_prebuilt.so',
+    ): blob_fixup()
+        .replace_needed(
+            'android.media.audio.common.types-V6-ndk.so',
             'android.media.audio.common.types-V3-ndk.so'
     ),
 
+        .replace_needed(
+            'android.media.audio.common.types-V6-ndk.so',
             'android.media.audio.common.types-V3-ndk.so'
         )
         .replace_needed(
@@ -212,6 +222,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed(
             'libaudio_aidl_conversion_common_ndk.so',
             'libaudio_aidl_conversion_common_ndk_prebuilt.so'
+        .replace_needed(
+            'android.media.audio.common.types-V6-ndk.so',
             'android.media.audio.common.types-V3-ndk.so'
     ),
 
@@ -233,6 +245,8 @@ blob_fixups: blob_fixups_user_type = {
             'android.media.audio.common.types-V3-ndk.so'
     ),
 
+        .replace_needed(
+            'android.media.audio.common.types-V6-ndk.so',
             'android.media.audio.common.types-V3-ndk.so'
         .replace_needed(
             'libaudio_aidl_conversion_common_ndk.so',
