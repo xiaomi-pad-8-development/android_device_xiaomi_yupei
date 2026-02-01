@@ -63,6 +63,7 @@ blob_fixups: blob_fixups_user_type = {
         'odm/lib64/libtruetone.so',
         'odm/lib64/libvideomode.so',
         'vendor/lib64/hw/camera.qcom.so',
+        'vendor/lib64/libgnss.so'
     ): blob_fixup()
         .replace_needed(
             'android.hardware.sensors-V2-ndk.so',
@@ -80,10 +81,12 @@ blob_fixups: blob_fixups_user_type = {
         )
         .replace_needed(
             'libtinyxml2.so',
+            'libtinyxml2-v34.so'
     ),
 
     (
         'odm/etc/camera/enhance_motiontuning.xml',
+        'odm/etc/camera/motiontuning.xml'
     ): blob_fixup()
         .regex_replace('xml=version', 'xml version'),
 
@@ -118,9 +121,11 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libsdmclient.so',
         'vendor/lib64/libsimulation.so',
         'vendor/lib64/libstandbyfeature.so',
+        'vendor/lib64/soundfx/libquasar.so'
     ): blob_fixup()
         .replace_needed(
             'libtinyxml2.so',
+            'libtinyxml2-v34.so'
     ),
 
     'odm/lib64/hw/displayfeature.default.so': blob_fixup()
@@ -130,6 +135,7 @@ blob_fixups: blob_fixups_user_type = {
         )
         .replace_needed(
             'libtinyxml2.so',
+            'libtinyxml2-v34.so'
     ),
 
     (
@@ -138,6 +144,7 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libar-pal.so',
         'vendor/lib64/libmcs.so',
         'vendor/lib64/libmikaraoke.so',
+        'vendor/lib64/libtiantongpal.so'
     ): blob_fixup()
         .replace_needed(
             'libaudioroute.so',
@@ -165,9 +172,11 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libcamximageformatutils.so',
         'vendor/lib64/libchifeature2.so',
         'vendor/lib64/libqvrservice.so',
+        'vendor/lib64/vendor.qti.hardware.camera.offlinecamera-service-impl.so'
     ): blob_fixup()
         .replace_needed(
             'android.hardware.graphics.allocator-V1-ndk.so',
+            'android.hardware.graphics.allocator-V2-ndk.so'
     ),
 
             'android.media.audio.common.types-V3-ndk.so'
@@ -177,12 +186,15 @@ blob_fixups: blob_fixups_user_type = {
         )
         .replace_needed(
             'libtinyxml2.so',
+            'libtinyxml2-v34.so'
     ),
 
         'vendor/lib64/libVoiceSdk.so',
         'vendor/lib64/libcapiv2uvvendor.so',
+        'vendor/lib64/liblistensoundmodel2vendor.so'
         .replace_needed(
             'libtensorflowlite_c.so',
+            'libtensorflowlite_c_vendor.so'
     ),
 
     'vendor/lib64/libaudioserviceexampleimpl.so': blob_fixup()
