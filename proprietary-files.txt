@@ -126,6 +126,7 @@ vendor/etc/kvh2xml.xml
 odm/firmware/sipa.bin
 
 # Audio graph manager
+vendor/lib64/libagmmixer.so
 vendor/lib64/libmisight.so
 
 # Audio soundfx
