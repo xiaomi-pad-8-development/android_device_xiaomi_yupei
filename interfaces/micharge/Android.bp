@@ -4,6 +4,9 @@
 //
 
 aidl_interface {
+    name: "vendor.xiaomi.hardware.micharge",
+    vendor_available: true,
+    srcs: ["vendor/xiaomi/hardware/micharge/*.aidl"],
     stability: "vintf",
     owner: "xiaomi",
     backend: {
@@ -22,3 +25,9 @@ aidl_interface {
             version: "1",
             imports: [],
         },
+        {
+            version: "2",
+            imports: [],
+        },
+    ],
+}
