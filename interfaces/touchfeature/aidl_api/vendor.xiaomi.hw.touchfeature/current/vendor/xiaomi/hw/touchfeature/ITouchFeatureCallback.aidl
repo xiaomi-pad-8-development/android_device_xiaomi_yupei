@@ -20,3 +20,8 @@
 // with such a backward incompatible change, it has a high risk of breaking
 // later when a module using the interface is updated, e.g., Mainline modules.
 
+package vendor.xiaomi.hw.touchfeature;
+@VintfStability
+interface ITouchFeatureCallback {
+  int callback(int type, int mode, int status, in int[] intValues, in String[] strValues);
+}
