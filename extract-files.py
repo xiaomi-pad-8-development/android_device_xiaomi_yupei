@@ -179,6 +179,7 @@ blob_fixups: blob_fixups_user_type = {
     'system_ext/etc/vintf/manifest/vendor.qti.qesdsys.service.xml': blob_fixup()
         .regex_replace(r'(?s)^.*?(?=<manifest)', ''),
 
+
     'vendor/etc/clstc_config_library.xml': blob_fixup()
         .regex_replace(r'<library>\s*<name>libdolbyclstc[\s\S]*?</library>', ''),
 
@@ -213,6 +214,7 @@ blob_fixups: blob_fixups_user_type = {
             'android.media.audio.common.types-V3-ndk.so'
     ),
 
+    'vendor/lib64/hw/libaudioeffecthal.qti.so': blob_fixup()
         .replace_needed(
             'android.media.audio.common.types-V6-ndk.so',
             'android.media.audio.common.types-V3-ndk.so'
@@ -245,6 +247,7 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed(
             'libaudio_aidl_conversion_common_ndk.so',
             'libaudio_aidl_conversion_common_ndk_prebuilt.so'
+        )
         .replace_needed(
             'android.media.audio.common.types-V6-ndk.so',
             'android.media.audio.common.types-V3-ndk.so'
@@ -284,6 +287,7 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed(
             'android.media.audio.common.types-V6-ndk.so',
             'android.media.audio.common.types-V3-ndk.so'
+        )
         .replace_needed(
             'libaudio_aidl_conversion_common_ndk.so',
             'libaudio_aidl_conversion_common_ndk_prebuilt.so'
