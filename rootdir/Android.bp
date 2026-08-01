@@ -57,6 +57,12 @@ sh_binary {
     src: "bin/init.qcom.sh",
     vendor: true,
 }
+
+sh_binary {
+    name: "init.qti.kernel.sh",
+    src: "bin/init.qti.kernel.sh",
+    vendor: true,
+}
 prebuilt_etc {
     name: "charger_fw_fstab.qti",
     src: "etc/charger_fw_fstab.qti",
@@ -81,6 +87,9 @@ prebuilt_etc {
     vendor: true,
 }
 
+prebuilt_etc {
+    name: "init.qti.kernel.rc",
+    src: "etc/init.qti.kernel.rc",
     sub_dir: "init/hw",
     vendor: true,
 }
