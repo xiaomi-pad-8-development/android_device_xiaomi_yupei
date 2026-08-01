@@ -63,6 +63,7 @@ import /vendor/etc/init/hw/init.qti.ufs.rc
 import /vendor/etc/init/hw/init.qcom.usb.rc
 import /vendor/etc/init/hw/init.qcom.test.rc
 import /vendor/etc/init/hw/init.target.rc
+import /vendor/etc/init/hw/init.qcom.factory.rc
 
 on early-init
     mount tracefs tracefs /sys/kernel/tracing
@@ -258,6 +259,7 @@ on post-fs-data
     mkdir /data/vendor/misc 01771 system system
 
     # Create directory used for dump collection
+    mkdir /data/vendor/ssrdump 0770 root system
 
     # Create directory used by display clients
     mkdir /data/vendor/display 0770 system graphics
@@ -278,11 +280,14 @@ on post-fs-data
     mkdir /data/vendor/qtee 0770 system system
 
     #Create folder of camera
+    mkdir /data/vendor/camera 0770 camera camera
+
 
     #Create directory for tftp
     mkdir /data/vendor/tombstones 0771 system system
     mkdir /data/vendor/tombstones/rfs 0771 system system
 
+    mkdir /data/vendor/ramdump 0771 root system
     mkdir /data/vendor/bluetooth 0770 bluetooth bluetooth
     mkdir /data/vendor/ramdump/bluetooth 0770 bluetooth bluetooth
 
@@ -453,11 +458,14 @@ on property:persist.vendor.qcomsysd.enabled=1 && property:ro.build.type=eng
 on property:persist.vendor.qcomsysd.enabled=0
     stop qcomsysd
 
+service vendor.ssr_setup /system/vendor/bin/ssr_setup
     oneshot
     disabled
 
+service vendor.ss_ramdump /system/vendor/bin/subsystem_ramdump
     class main
     user system
+    group system
     ioprio rt 4
     disabled
 
@@ -670,6 +678,7 @@ service wifi_ftmd /system/vendor/bin/wifi_ftmd
 on property:vendor.wifi.ftmd.load=true
     insmod /system/lib/modules/pronto/pronto_wlan.ko con_mode=5
 
+service cnss-daemon /system/vendor/bin/cnss-daemon -n -l
     class late_start
     user system
     group system inet net_admin wifi
@@ -740,6 +749,7 @@ service wifi-crda /vendor/bin/init.crda.sh
 
 on property:sys.boot_completed=1
     start qcom-post-boot
+    start qti-testscripts
 
 on property:ro.vendor.ril.mbn_copy_completed=1
     write /data/vendor/radio/copy_complete 1
@@ -793,13 +803,17 @@ service vendor.ssr_diag /system/vendor/bin/ssr_diag
     group system
     disabled
 
+service diag_mdlog_start /system/vendor/bin/diag_mdlog
     class late_start
     user shell
+    group system oem_2901 sdcard_rw sdcard_r media_rw
     disabled
     oneshot
 
+service diag_mdlog_stop /system/vendor/bin/diag_mdlog -k
     class late_start
     user shell
+    group system oem_2901 sdcard_rw sdcard_r media_rw
     disabled
     oneshot
 

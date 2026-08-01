@@ -77,6 +77,7 @@ on early-fs
     start vold
 
 on fs
+    mount_all --early
     chown root system /mnt/vendor/persist
     chmod 0771 /mnt/vendor/persist
     restorecon_recursive /mnt/vendor/persist
@@ -98,6 +99,7 @@ on post-fs
 
 on late-fs
     #exec_start wait_for_keymaster
+    mount_all --late
 
 on post-fs-data
     mkdir /vendor/data/tombstones 0771 system system
@@ -109,6 +111,7 @@ on early-boot
     verity_update_state
 
 on boot
+    write /dev/cpuset/audio-app/cpus 0-1
     # Add a cpuset for the camera daemon
     # We want all cores for camera
     mkdir /dev/cpuset/camera-daemon
