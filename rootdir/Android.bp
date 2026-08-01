@@ -76,6 +76,11 @@ prebuilt_etc {
     vendor: true,
 }
 
+prebuilt_etc {
+    sub_dir: "init",
+    vendor: true,
+}
+
     sub_dir: "init/hw",
     vendor: true,
 }
