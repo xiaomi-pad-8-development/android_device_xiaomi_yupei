@@ -2256,6 +2256,14 @@ odm/lib64/libtouchreport_sensor.so
 # Touchscreen
 odm/firmware/nvt_run_selftest_get_result_data_sample.bat
 
+# Touchscreen (recovery)
+odm/bin/touch_report_debug:recovery/root/vendor/bin/touch_report_debug;MAKE_COPY_RULE_ONLY
+odm/lib64/libtouchreport.so:recovery/root/vendor/odm/lib64/libtouchreport.so;MAKE_COPY_RULE_ONLY
+odm/lib64/libtouchreport_alg.so:recovery/root/vendor/odm/lib64/libtouchreport_alg.so;MAKE_COPY_RULE_ONLY
+odm/lib64/libtouchreport_hal.so:recovery/root/vendor/odm/lib64/libtouchreport_hal.so;MAKE_COPY_RULE_ONLY
+odm/lib64/libtouchreport_sensor.so:recovery/root/vendor/odm/lib64/libtouchreport_sensor.so;MAKE_COPY_RULE_ONLY
+odm/lib64/libtensorflowlite_touch_c.so:recovery/root/vendor/odm/lib64/libtensorflowlite_touch_c.so;MAKE_COPY_RULE_ONLY
+
 # Trusted Execution Environment connector
 vendor/lib64/libGPMTEEC_vendor.so
 vendor/lib64/libGPTEE_vendor.so
