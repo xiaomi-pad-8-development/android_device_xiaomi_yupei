@@ -164,6 +164,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml \
     frameworks/native/data/etc/android.software.opengles.deqp.level-2023-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.opengles.deqp.level.xml
 
+# Hypsys
 PRODUCT_PACKAGES += \
     xiaomi.system.hypsys.common-service-dummy
 
@@ -191,6 +192,8 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qti.kernel.rc \
     init.recovery.qcom.rc \
+    init.target.rc \
+    init.yupei.rc
 
 PRODUCT_PACKAGES += \
     init.class_main.sh \
@@ -349,3 +352,4 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.aware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.aware.xml
 
 # Vendor
+$(call inherit-product, vendor/xiaomi/yupei/yupei-vendor.mk)

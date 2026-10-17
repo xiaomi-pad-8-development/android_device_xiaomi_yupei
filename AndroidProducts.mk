@@ -4,3 +4,4 @@
 #
 
 PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/custom_yupei.mk

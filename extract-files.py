@@ -33,6 +33,7 @@ namespace_imports = [
     'vendor/qcom/opensource/commonsys-intf/display',
     'vendor/qcom/opensource/dataservices',
     'vendor/qcom/opensource/display',
+    'device/xiaomi/yupei',
 ]
 
 
@@ -437,6 +438,7 @@ blob_fixups: blob_fixups_user_type = {
 }  # fmt: skip
 
 module = ExtractUtilsModule(
+    'yupei',
     'xiaomi',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,

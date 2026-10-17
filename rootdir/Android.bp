@@ -83,6 +83,8 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.yupei.rc",
+    src: "etc/init.yupei.rc",
     sub_dir: "init",
     vendor: true,
 }
@@ -121,3 +123,4 @@ prebuilt_etc {
     src: "etc/ueventd.qcom.rc",
     vendor: true,
 }
+
