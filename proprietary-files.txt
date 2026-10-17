@@ -2375,6 +2375,9 @@ vendor/lib64/vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk.so;MODULE_SUFFIX
 vendor/lib64/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
 
 
+# Audio configs - yupei
+vendor/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml
+
 # ACDB - yupei
 odm/etc/acdbdata/Mi/Mi_acdb_cal.acdb
 odm/etc/acdbdata/Mi/Mi_workspaceFileXml.qwsp
