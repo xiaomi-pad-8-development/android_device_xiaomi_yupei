@@ -80,9 +80,18 @@ BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_INIT_BOOT_HEADER_VERSION := 4
 BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
 
+KERNEL_PATH := device/xiaomi/yupei-kernel
+TARGET_FORCE_PREBUILT_KERNEL := true
+TARGET_KERNEL_CONFIG := gki_defconfig
+TARGET_KERNEL_SOURCE := $(KERNEL_PATH)/kernel-headers
+TARGET_KERNEL_VERSION := 6.6
+TARGET_PREBUILT_KERNEL := $(KERNEL_PATH)/images/kernel
+BOARD_PREBUILT_DTBIMAGE_DIR := $(KERNEL_PATH)/images/dtbs
+BOARD_PREBUILT_DTBOIMAGE := $(KERNEL_PATH)/images/dtbo.img
 
 BOARD_KERNEL_CMDLINE := \
     video=vfb:640x400,bpp=32,memsize=3072000 \
+    sysctl.kernel.firmware_config.force_sysfs_fallback=1
 
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
@@ -94,6 +103,9 @@ BOARD_BOOTCONFIG := \
     androidboot.vendor.qspa=true
 
 # Kernel modules
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(KERNEL_PATH)/modules/vendor_boot/*.ko)
+BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(KERNEL_PATH)/modules/vendor_dlkm/*.ko)
+BOARD_SYSTEM_KERNEL_MODULES := $(wildcard $(KERNEL_PATH)/modules/system_dlkm/*.ko)
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
