@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Status bar height. -->
+    <dimen name="status_bar_height_default">90px</dimen>
+    <dimen name="status_bar_height_portrait">90px</dimen>
+
+    <!-- Display corner radius. -->
+    <dimen name="rounded_corner_radius">54px</dimen>
+    <dimen name="rounded_corner_radius_top">54px</dimen>
+    <dimen name="rounded_corner_radius_bottom">54px</dimen>
+    <dimen name="rounded_corner_content_padding">0dp</dimen>
+</resources>
