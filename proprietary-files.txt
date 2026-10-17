@@ -2374,6 +2374,20 @@ vendor/lib64/vendor.qti.hardware.sigma_miracast_aidl-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
 
+# Camera libraries - yupei
+odm/lib64/libFaceCenterAlgo.so
+vendor/lib64/libMiStereoFactoryCalibAnalyzeBin_qual.so
+odm/lib64/libalCFR.so
+odm/lib64/libarcsoft_beautyshot.so
+odm/lib64/libarcsoft_hdr_detection.so
+odm/lib64/libarcsoft_high_dynamic_range.so
+odm/lib64/libarcsoft_low_light_hdr.so
+odm/lib64/libarcsoft_mf_superresolution.so
+odm/lib64/libarcsoft_super_night_raw.so
+vendor/lib64/libcom.xiaomi.algotest.so
+vendor/lib64/libcom.xiaomi.ionutils.so
+vendor/lib64/libmiStereoCalibLib_qual.so
+vendor/lib64/libvega_common.so
 
 # Camera - yupei
 odm/etc/camera/aivsModel_558B456C
