@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Take the country code from nearby access points, since the
+         tablet has no modem to learn it from. Without one the driver
+         stays in world mode, which only scans 5GHz passively. -->
+    <bool name="config_wifiUpdateCountryCodeFromScanResultGeneric">true</bool>
+</resources>
