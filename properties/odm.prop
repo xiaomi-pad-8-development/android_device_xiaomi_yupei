@@ -169,6 +169,7 @@ ro.vendor.display.has_50fps_for_video=true
 ro.vendor.display.hdr_switch_d75_enable=true
 ro.vendor.display.idle_default_fps.support=true
 ro.vendor.display.idle_default_fps=50
+ro.vendor.display.kernel_recoder_enable=false
 ro.vendor.display.mi_calib.enable=true
 ro.vendor.display.mode_change_optimize.enable=true
 ro.vendor.display.nature_mode.enable=true
