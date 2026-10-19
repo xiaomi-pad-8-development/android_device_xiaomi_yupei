@@ -120,6 +120,9 @@ blob_fixups: blob_fixups_user_type = {
             'libtinyxml2-v34.so'
     ),
 
+    'odm/etc/audio/sku_tuna/resourcemanager_tuna_mtp.xml': blob_fixup()
+        .regex_replace('logging_level" value ="0xF"', 'logging_level" value ="0x3"'),
+
     (
         'odm/etc/camera/enhance_motiontuning.xml',
         'odm/etc/camera/motiontuning.xml',
@@ -340,6 +343,12 @@ blob_fixups: blob_fixups_user_type = {
             'libtensorflowlite_c.so',
             'libtensorflowlite_c_vendor.so'
     ),
+
+    'vendor/lib64/libarmemlog.so': blob_fixup()
+        .sig_replace(
+            '3f 23 03 d5 ff 43 01 d1 fd 7b 01 a9 f7 13 00 f9',
+            'e0 03 1f 2a c0 03 5f d6 1f 20 03 d5 1f 20 03 d5',
+        ),
 
     'vendor/lib64/libaudioserviceexampleimpl.so': blob_fixup()
         .add_needed('libaudioutils_shim.so')
