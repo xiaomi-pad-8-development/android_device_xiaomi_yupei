@@ -227,6 +227,7 @@ vendor.display.enable_hdr10_gpu_target=0
 vendor.display.enable_hist_intr=1
 vendor.display.force_tonemapping=1
 vendor.display.idle_time=0
+vendor.display.support_function_timer=1
 vendor.display.use_layer_ext=0
 vendor.wallpaper.color.flag=BK
 
