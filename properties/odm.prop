@@ -216,6 +216,7 @@ vendor.display.disable_cwb_call=0
 vendor.display.disable_cwb_idle_fallback=1
 vendor.display.disable_dynamic_sf_idle=1
 vendor.display.disable_idle_scaling_layers=1
+vendor.display.disable_llcc_during_aod=1
 vendor.display.disable_metadata_dynamic_fps=1
 vendor.display.disable_sdr_dimming=0
 vendor.display.disable_stc_dimming=1
