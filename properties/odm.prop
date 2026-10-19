@@ -132,8 +132,8 @@ ro.vendor.build.fingerprint=Xiaomi/yupei_global/yupei:15/AQ3A.250226.002/OS3.0.3
 ro.vendor.kernel.build=gki
 
 # Camera
-persist.sys.miui.camera.quickcamera.supported=true
 ro.camera.disableHeicUltraHDR=true
+ro.camera.disableJpegR=true
 ro.camerax.extensions.enabled=false
 ro.vendor.dynamiccamera.ability_level=2
 
