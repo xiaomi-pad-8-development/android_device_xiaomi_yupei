@@ -230,7 +230,6 @@ sys.haptic.dfs.support=false
 # Logging
 persist.vendor.debug.collision.dfx=true
 persist.vendor.mdlog_mi.enable=false
-ro.logd.size=2M
 
 # Media
 debug.config.media.video.ace.support=true
