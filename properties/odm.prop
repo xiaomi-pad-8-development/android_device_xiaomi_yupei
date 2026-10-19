@@ -278,9 +278,6 @@ ro.vendor.s2_reboot_time=12
 # Stability
 persist.sys.stability.f2fsTrackEnable=true
 
-# Telephony
-ro.telephony.default_network=33,33
-
 # Touch
 persist.sys.touch.followup.enable=true
 persist.vendor.touchfeature.gameturbotool.version=v3.5
