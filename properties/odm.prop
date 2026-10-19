@@ -127,6 +127,9 @@ persist.vendor.tracking.dfs=true
 persist.vendor.vcb.ability=true
 persist.vendor.vcb.enable=false
 
+# Bluetooth
+ro.bluetooth.finder.supported=true
+
 # Build
 ro.vendor.build.fingerprint=Xiaomi/yupei_global/yupei:15/AQ3A.250226.002/OS3.0.303.0.WPZINXM:user/release-keys
 ro.vendor.kernel.build=gki
