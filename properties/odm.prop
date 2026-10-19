@@ -291,7 +291,6 @@ ro.vendor.touch.touchscheduler.enable=true
 ro.vendor.touchfeature.type=35
 
 # WiFi
-persist.vendor.wifi.interrupt_test_mode=true
 ro.hardware.wlan.chip=qca_cld3_wcn7750
 ro.hardware.wlan.dbs=0
 ro.hardware.wlan.mimo=1
