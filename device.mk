@@ -367,3 +367,8 @@ PRODUCT_COPY_FILES += \
 
 # Vendor
 $(call inherit-product, vendor/xiaomi/yupei/yupei-vendor.mk)
+
+# Release keys
+ifneq (,$(wildcard vendor/yupei-priv/keys/releasekey.pk8))
+PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/yupei-priv/keys/releasekey
+endif
