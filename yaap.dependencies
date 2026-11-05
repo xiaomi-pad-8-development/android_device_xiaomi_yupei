@@ -1,0 +1,78 @@
+[
+  {
+    "repository": "hardware_xiaomi",
+    "target_path": "hardware/xiaomi"
+  },
+  {
+    "remote": "github",
+    "repository": "PixelOS-Devices/android_device_xiaomi_yupei-kernel",
+    "target_path": "device/xiaomi/yupei-kernel",
+    "branch": "seventeen"
+  },
+  {
+    "remote": "gitlab",
+    "repository": "sidharthify/android_vendor_xiaomi_yupei",
+    "target_path": "vendor/xiaomi/yupei",
+    "branch": "seventeen"
+  },
+  {
+    "remote": "github",
+    "repository": "LineageOS/android_device_qcom_sepolicy_vndr",
+    "target_path": "device/qcom/sepolicy_vndr/sm8750",
+    "branch": "lineage-24.0-caf-sm8750"
+  },
+  {
+    "remote": "github",
+    "repository": "LineageOS/android_vendor_qcom_opensource_agm",
+    "target_path": "hardware/qcom-caf/sm8750/audio/agm",
+    "branch": "lineage-24.0-caf-sm8750"
+  },
+  {
+    "remote": "github",
+    "repository": "LineageOS/android_vendor_qcom_opensource_audioreach-graphservices",
+    "target_path": "hardware/qcom-caf/sm8750/audio/graphservices",
+    "branch": "lineage-24.0-caf-sm8750"
+  },
+  {
+    "remote": "github",
+    "repository": "LineageOS/android_vendor_qcom_opensource_arpal-lx",
+    "target_path": "hardware/qcom-caf/sm8750/audio/pal",
+    "branch": "lineage-24.0-caf-sm8750"
+  },
+  {
+    "remote": "github",
+    "repository": "LineageOS/android_hardware_qcom_audio-ar",
+    "target_path": "hardware/qcom-caf/sm8750/audio/primary-hal",
+    "branch": "lineage-24.0-caf-sm8750"
+  },
+  {
+    "remote": "github",
+    "repository": "LineageOS/android_vendor_qcom_opensource_data-ipa-cfg-mgr",
+    "target_path": "hardware/qcom-caf/sm8750/data-ipa-cfg-mgr",
+    "branch": "lineage-24.0-caf-sm8750"
+  },
+  {
+    "remote": "github",
+    "repository": "LineageOS/android_vendor_qcom_opensource_dataipa",
+    "target_path": "hardware/qcom-caf/sm8750/dataipa",
+    "branch": "lineage-24.0-caf-sm8750"
+  },
+  {
+    "remote": "github",
+    "repository": "LineageOS/android_vendor_qcom_opensource_display-core",
+    "target_path": "hardware/qcom-caf/sm8750/display/core",
+    "branch": "lineage-24.0-caf-sm8750"
+  },
+  {
+    "remote": "github",
+    "repository": "LineageOS/android_hardware_qcom_display",
+    "target_path": "hardware/qcom-caf/sm8750/display/hal",
+    "branch": "lineage-24.0-caf-sm8750"
+  },
+  {
+    "remote": "github",
+    "repository": "LineageOS/android_vendor_qcom_opensource_display-intf",
+    "target_path": "hardware/qcom-caf/sm8750/display/intf",
+    "branch": "lineage-24.0-caf-sm8750"
+  }
+]
