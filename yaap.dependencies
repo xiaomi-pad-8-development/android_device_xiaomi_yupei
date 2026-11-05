@@ -17,6 +17,12 @@
   },
   {
     "remote": "github",
+    "repository": "PixelOS-AOSP/android_packages_apps_DolbyAtmos",
+    "target_path": "packages/apps/DolbyAtmos",
+    "branch": "seventeen"
+  },
+  {
+    "remote": "github",
     "repository": "LineageOS/android_device_qcom_sepolicy_vndr",
     "target_path": "device/qcom/sepolicy_vndr/sm8750",
     "branch": "lineage-24.0-caf-sm8750"
