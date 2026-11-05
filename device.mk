@@ -270,6 +270,7 @@ PRODUCT_COPY_FILES += \
 # Overlays
 PRODUCT_PACKAGES += \
     FrameworkOverlayYupei \
+    SettingsOverlayYupei \
     SettingsProviderOverlayYupei \
     WifiOverlayYupei
 
