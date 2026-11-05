@@ -4,4 +4,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/custom_yupei.mk
+    $(LOCAL_DIR)/yaap_yupei.mk
+
+COMMON_LUNCH_CHOICES := \
+    yaap_yupei-user \
+    yaap_yupei-userdebug
