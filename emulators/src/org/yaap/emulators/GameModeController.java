@@ -72,14 +72,13 @@ final class GameModeController implements ActivityManager.OnUidImportanceListene
         }
 
         final boolean enable = !mTopUids.isEmpty();
-        if (enable == mEnabled) {
-            return;
+        if (enable != mEnabled) {
+            mEnabled = enable;
+            setGameMode(enable);
         }
-        mEnabled = enable;
-        setGameMode(enable);
 
-        // GameManagerService may turn the mode off for the same switch
-        // once it sees a non-game on top, so say it once more
+        // GameManagerService turns the mode off whenever a non-game reaches
+        // the top, so say it again after any change while one is held
         mHandler.removeCallbacks(mReassert);
         if (enable) {
             mHandler.postDelayed(mReassert, REASSERT_DELAY_MS);
